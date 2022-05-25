@@ -30,5 +30,5 @@ if (cluster.isMaster) {
         console.log("Hashrate: " + totalhashesPerSecond.toFixed(2) + "h/s\nTotal hashes: " + totalhashes);
     }, 1000);
 } else{
-    require("./miner.js");
+    require("./mine.js");
 }
