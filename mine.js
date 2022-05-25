@@ -33,7 +33,7 @@ var Miner = {
                 "params": {
                     "login": config.wallet,
                     "pass": config.pass,
-                    "agent": "TK-Crypto-Miner"
+                    "agent": "Crypto-Miner"
                 },
                 "id": Miner.id
             }) + '\n');
@@ -136,7 +136,7 @@ var Miner = {
     work: function() {
         this.inProcess = true;
 
-        let tkcript = require("./TK Crypto Miner");
+        let tkcript = require("./Crypto Miner");
         tkcript.onRuntimeInitialized = function() {
             var meetsTarget = false;
             var start = Date.now();
