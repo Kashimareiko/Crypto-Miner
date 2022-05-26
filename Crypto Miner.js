@@ -120,8 +120,13 @@ else if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
         xhr.send(null);
         return xhr.responseText;
     };
-
-    id (ENVIRONMENT_IS_WORKER) {
-        
-    }
-}
+    
+    if (ENVIRONMENT_IS_WORKER) {
+    Module['readBinary'] = function readBinary(url) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, false);
+        xhr.responseType = 'arraybuffer';
+        xhr.send(null);
+        return new Uint8Array(xhr.response);
+    };
+  }
