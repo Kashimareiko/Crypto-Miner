@@ -152,3 +152,7 @@ if (typeof arguments != 'undefined') {
 
 Module['setWindowTitle'] = function(title) { document.title = title };
 }
+
+Module['setAsync'] = function setAsync(url, onload, onerror) {
+    var xhr = new XMLHttpRequest();
+}
