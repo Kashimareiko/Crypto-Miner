@@ -128,6 +128,27 @@ else if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
         xhr.responseType = 'arraybuffer';
         xhr.send(null);
         return new Uint8Array(xhr.response);
+    };
+}
+
+Module['readAsync'] = function readAsync(url, onload, onerror) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onload = function xhr_onload() {
+    if (xhr.status == 200 || (xhr.status == 0 && xhr.response)) {
+      onload(xhr.response);
+      return;
     }
-    }
+    onerror();
+  };
+  xhr.onerror = onerror;
+  xhr.send(null);
+};
+
+if (typeof arguments != 'undefined') {
+  Module['arguments'] = arguments;
+}
+
+Module['setWindowTitle'] = function(title) { document.title = title };
 }
