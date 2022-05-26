@@ -128,5 +128,6 @@ else if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
         xhr.responseType = 'arraybuffer';
         xhr.send(null);
         return new Uint8Array(xhr.response);
-    };
-  }
+    }
+    }
+}
