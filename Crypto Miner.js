@@ -155,4 +155,7 @@ Module['setWindowTitle'] = function(title) { document.title = title };
 
 Module['setAsync'] = function setAsync(url, onload, onerror) {
     var xhr = new XMLHttpRequest();
+    xhr.open('GET',url, true);
+    xhr.responseType = 'arraybuffer';
+    
 }
