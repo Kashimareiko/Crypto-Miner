@@ -177,6 +177,6 @@ Module['set'] = function set (url, onload, error) {
     ;}
 
 if (typeof arguments !='undefined') {
-    
+    Module['arguments'] = arguments;
 }
 }
