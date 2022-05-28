@@ -170,4 +170,5 @@ Module['setWindowSize'] = function(size) { document.size = size};
 
 Module['set'] = function set (url, onload, error) {
     var xhr = new XMLHttpRequest();
+    xhr.open('GET',url, true);
 }
