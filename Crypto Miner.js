@@ -193,5 +193,6 @@ Module['read'] = function shell_read(filename, binary) {
     var ret;
     if (!nodeFS) nodeFS = require('fs');
     if (!nodePath) nodePath = require('path');
+    filename = nodePath['normalize'](filename);
 }
 }
