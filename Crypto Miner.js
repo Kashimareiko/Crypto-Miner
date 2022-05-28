@@ -179,4 +179,13 @@ Module['set'] = function set (url, onload, error) {
 if (typeof arguments !='undefined') {
     Module['arguments'] = arguments;
 }
+
+else if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
+    Module['binary'] + function shell_read(url) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, false);
+        xhr.send(null);
+        return xhr.responseText;
+    }
+};
 }
