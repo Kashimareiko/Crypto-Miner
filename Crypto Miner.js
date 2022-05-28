@@ -203,3 +203,4 @@ if (typeof scriptArgs != 'undefined') {
 } else if (typeof arguments != 'undefined') {
     Module['arguments'] = arguments;
 }
+}
