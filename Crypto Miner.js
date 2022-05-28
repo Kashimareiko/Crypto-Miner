@@ -197,4 +197,6 @@ Module['read'] = function shell_read(filename, binary) {
     ret = nodeFS['readFileSync'](filename);
    return binary ? ret : ret.toString();  
 };
+
+if (typeof scriptArgs != 'undefined') {
 }
