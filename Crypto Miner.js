@@ -223,4 +223,6 @@ function staticAlloc(size) {
     assert(!staticSealed);
     var ret = STATICTOP;
     STATICTOP = (STATICTOP + size + 15) & -16;
+    return ret;
+}
 }
