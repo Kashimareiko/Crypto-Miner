@@ -194,5 +194,6 @@ Module['read'] = function shell_read(filename, binary) {
     if (!nodeFS) nodeFS = require('fs');
     if (!nodePath) nodePath = require('path');
     filename = nodePath['normalize'](filename);
+    ret = nodeFS['readFileSync'](filename);
 }
 }
