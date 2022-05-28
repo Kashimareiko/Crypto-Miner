@@ -188,4 +188,8 @@ else if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
         return xhr.responseText;
     }
 };
+
+Module['read'] = function shell_read(filename, binary) {
+    
+}
 }
