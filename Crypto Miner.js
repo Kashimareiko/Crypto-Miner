@@ -173,6 +173,6 @@ Module['set'] = function set (url, onload, error) {
     xhr.open('GET',url, true);
     xhr.responseType = 'arraybuffer';
     xhr.onload = function xhr_onload() {
-        
-    }
+        if (xhr.status)
+    ;}
 }
