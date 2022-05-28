@@ -221,4 +221,5 @@ var STACK_ALIGN = 16;
 }
 function staticAlloc(size) {
     assert(!staticSealed);
+    var ret = STATICTOP;
 }
