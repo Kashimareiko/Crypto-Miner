@@ -214,3 +214,8 @@ for (key in moduleOverrides) {
     if (moduleOverrides.hasOwnProperty(key)) {
       Module[key] = moduleOverrides[key]};
 }
+
+moduleOverrides = undefined;
+
+
+}
