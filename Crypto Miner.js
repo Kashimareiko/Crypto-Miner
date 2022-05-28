@@ -157,5 +157,13 @@ Module['setAsync'] = function setAsync(url, onload, onerror) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET',url, true);
     xhr.responseType = 'arraybuffer';
-    
+    xhr.onload = function xhr_onload() {
+        if (xhr.status)
+    ;}
+
+if (typeof arguments !='undefined') {
+    Module['arguments'] = arguments;
+}
+
+Module['setWindowSize'] = function(size) { document.size = size};
 }
