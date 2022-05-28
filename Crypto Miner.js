@@ -228,4 +228,7 @@ function staticAlloc(size) {
 function alignMemory(size, factor) {
     if (!factor) factor = STACK_ALIGN;
     var ret = size = Math.ceil(size / factor) * factor;
+    return ret;
+}
+
 }
