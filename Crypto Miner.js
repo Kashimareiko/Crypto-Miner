@@ -225,4 +225,5 @@ function staticAlloc(size) {
     STATICTOP = (STATICTOP + size + 15) & -16;
     return ret;
 }
+function alignMemory(size, factor) {
 }
