@@ -209,4 +209,8 @@ else {
   }
 Module['print'] = typeof console !== 'undefined' ? console.log : (typeof print !== 'undefined' ? print : null);
 Module['printErr'] = typeof printErr !== 'undefined' ? printErr : ((typeof console !== 'undefined' && console.warn) || Module['print']);
+
+for (key in moduleOverrides) {
+    if (moduleOverrides.hasOwnProperty(key)) {
+      Module[key] = moduleOverrides[key]};
 }
