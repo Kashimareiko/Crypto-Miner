@@ -172,4 +172,7 @@ Module['set'] = function set (url, onload, error) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET',url, true);
     xhr.responseType = 'arraybuffer';
+    xhr.onload = function xhr_onload() {
+        
+    }
 }
