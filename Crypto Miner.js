@@ -191,5 +191,7 @@ else if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
 
 Module['read'] = function shell_read(filename, binary) {
     var ret;
+    if (!nodeFS) nodeFS = require('fs');
+
 }
 }
