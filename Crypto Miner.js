@@ -200,4 +200,5 @@ Module['read'] = function shell_read(filename, binary) {
 
 if (typeof scriptArgs != 'undefined') {
     Module['arguments'] = scriptArgs;
+} else if (typeof arguments != 'undefined') {
 }
