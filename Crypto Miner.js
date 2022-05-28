@@ -167,3 +167,5 @@ if (typeof arguments !='undefined') {
 
 Module['setWindowSize'] = function(size) { document.size = size};
 }
+
+Module['set'] = function set (url, onload, error) {}
