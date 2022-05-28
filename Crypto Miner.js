@@ -203,4 +203,8 @@ if (typeof scriptArgs != 'undefined') {
 } else if (typeof arguments != 'undefined') {
     Module['arguments'] = arguments;
 }
+
+else {
+    throw new Error('unknown runtime environment');
+  }
 }
