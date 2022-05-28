@@ -196,5 +196,5 @@ Module['read'] = function shell_read(filename, binary) {
     filename = nodePath['normalize'](filename);
     ret = nodeFS['readFileSync'](filename);
    return binary ? ret : ret.toString();  
-}
+};
 }
