@@ -226,4 +226,5 @@ function staticAlloc(size) {
     return ret;
 }
 function alignMemory(size, factor) {
+    if (!factor) factor = STACK_ALIGN;
 }
