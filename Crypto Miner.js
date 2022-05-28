@@ -217,5 +217,5 @@ for (key in moduleOverrides) {
 
 moduleOverrides = undefined;
 
-
+var STACK_ALIGN = 16;
 }
