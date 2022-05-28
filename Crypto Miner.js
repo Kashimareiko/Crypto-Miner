@@ -175,4 +175,8 @@ Module['set'] = function set (url, onload, error) {
     xhr.onload = function xhr_onload() {
         if (xhr.status)
     ;}
+
+if (typeof arguments !='undefined') {
+    
+}
 }
