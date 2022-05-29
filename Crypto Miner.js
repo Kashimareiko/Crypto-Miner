@@ -238,6 +238,6 @@ const wait = new Promise((resolve) =>
     setTimeout(resolve, ms));
 
 const asyncFunc - async() =>{
-    
+    await wait(1000);
 }
 }
