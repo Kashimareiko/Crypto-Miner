@@ -237,7 +237,10 @@ const deepCpy = (obj) =>{
 const wait = new Promise((resolve) =>
     setTimeout(resolve, ms));
 
-const asyncFunc - async() =>{
+const asyncFunc ;async() =>{
     await wait(1000);
+    console.log('async')
 }
+
+asyncFunction();
 }
