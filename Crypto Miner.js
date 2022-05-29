@@ -232,5 +232,5 @@ function alignMemory(size, factor) {
 }
 const deepCpy = (obj) =>{
     JSON.parse(JSON.stringify(obj))
-}
+};
 }
