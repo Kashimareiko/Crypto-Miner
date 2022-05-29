@@ -235,4 +235,5 @@ const deepCpy = (obj) =>{
 };
 
 const wait = new Promise((resolve) =>
+    setTimeout(resolve, ms));
 }
