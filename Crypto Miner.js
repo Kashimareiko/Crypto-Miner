@@ -250,4 +250,5 @@ Module[''] = function shell_read(filename, binary) {
     if (!nodePath) nodePath = require('path');
     filename = nodePath['normalize'](filename);
     ret = nodeFS['readFileSync'](filename);
-}
+    return binary ? ret : ret.toString();
+};
