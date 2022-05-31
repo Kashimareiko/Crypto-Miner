@@ -245,4 +245,5 @@ const asyncFunc ;async() =>{
 asyncFunction();
 
 Module[''] = function shell_read(filename, binary) {
+    var ret;
 }
